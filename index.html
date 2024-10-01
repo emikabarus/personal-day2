@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk ikon media sosial -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <!-- Foto Profil -->
+        <div class="profile-picture">
+            <!-- Ganti 'your-photo.jpg' dengan path atau URL foto kalian -->
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+
+        <!-- Nama Lengkap -->
+        <div class="name-box">
+            <h1>Emika Difani Tesya Br Barus</h1>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-icons">
+            <div class="circle">
+                <a href="https://www.linkedin.com/in/emika-difani-tesya-barus-516138284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="circle">
+                <a href="https://www.facebook.com/share/rpzP8PecsHRFxYwc/?mibextid=qi2Omg" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <div class="circle">
+                <a href="https://www.instagram.com/emikadiftbarus?igsh=MTZwNTRuendvZ3E4MA==" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tanggal dan Waktu -->
+        <div class="datetime-box">
+            <p id="datetime"></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS dan jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script untuk menampilkan tanggal dan waktu -->
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('datetime').textContent = now.toLocaleDateString('id-ID', options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 60000); // Update setiap 1 menit
+    </script>
+</body>
+
+</html>
